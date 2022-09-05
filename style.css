@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+  
+html {
+  font-size: 24px;
+  font-family: 'Unica One', cursive;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+#app h1 {
+  font-size: 5vw;
+  letter-spacing: 0.5rem;
+  margin-bottom: 5vh;
+}
+
+
+.calculator {
+  width: 70vw;
+  background-color: black;
+  border-radius: 3%;
+  box-shadow: 0 0 10px;
+}
+
+.display {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, 30px);
+  background-color: rgb(136,136,254);
+  margin: 0.7rem;
+  padding: 0.5rem;
+  font-size: calc(1rem + 0.8vw);
+  height: 24vh;
+}
+
+.controls {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 17vw 1fr 1fr 1fr;
+  height: 50vh;
+  grid-auto-flow: dense;
+  color: red;
+  background-color: black;
+  padding: 0.3rem;
+  border-radius: 3%;
+}
+
+.controls button {
+  font-size: calc(0.5rem + 1.5vw);
+  background-color: red;
+  margin: 0.3rem;
+  padding: 0.3rem;
+  border-radius: 8%;
+}
+
+.memory {
+  display: contents;
+}
+
+.operations {
+  display: contents;
+}
+
+.digits {
+  display: contents;
+}
+
+.add {
+  grid-column: 4;
+}
+
+.subtract {
+  grid-column: 4;
+}
+
+.multiply {
+  grid-column: 4;
+}
+
+.divide {
+  grid-column: 4;
+}
+
+.equals {
+  grid-column: 4;
+}
+
+.clear-entry {
+  grid-column: 2 / 4;
+}
+
+.zero {
+  grid-column: 2 / 4;
+}
+
+@media screen and (min-width: 750px){
+  .calculator {
+    width: 50vw;
+  }
+
+  .controls {
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 12vw 1fr 1fr 1fr;
+  }
+  .controls button {
+    font-size: calc(0.5rem + 0.8vw);
+  }
+}
+
+@media screen and (min-width: 1000px){
+  .calculator {
+    width: 35vw;
+  }
+
+  .controls {
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 8vw 1fr 1fr 1fr;
+  }
+
+  .controls button {
+    font-size: calc(0.5rem + 0.6vw);
+  }
+}
+
+@media screen and (min-width: 1300px){
+
+  .controls {
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 9vw 1fr 1fr 1fr;
+  }
+
+}
+
+@media screen and (min-width: 1600px){
+  .calculator {
+    width: 25vw;
+  }
+  .controls {
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 5vw 1fr 1fr 1fr;
+  }
+
+  .controls button {
+    font-size: calc(0.5rem + 0.3vw);
+  }
+}
